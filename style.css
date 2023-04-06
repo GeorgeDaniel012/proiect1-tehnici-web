@@ -5,12 +5,17 @@ html {
     min-height: 100%;
 }
 
+p, h1, h2, h3 {
+    color: #222222;
+}
+
 body {
     padding: 0;
     margin: 0;
 }
 
 header {
+    z-index: 1;
     position: sticky;
     top: 0;
     background-image: linear-gradient(#333333, black);
@@ -66,7 +71,7 @@ header {
 
 .dropdown-content {
     padding: 8px;
-    background-color: #222222;
+    background-image: linear-gradient(#333333, black);
     display: flex;
     flex-direction: column;
     visibility: hidden;
@@ -85,8 +90,8 @@ header {
         row-gap: 10px;
     }
 
-    header img {
-        max-width: 80%;
+    .logo img {
+        max-width: 100%;
     }
 
     .navbar {
@@ -109,7 +114,7 @@ header {
 }
 
 main {
-    margin: 20px 16px 180px 16px;
+    margin: 20px 16px 220px 16px;
 }
 
 section {
@@ -132,69 +137,29 @@ section {
     background-color: #222222;
 }
 
-.news-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 25px;
-}
-
-@media screen and (max-width: 840px) {
-    .news-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .news-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-.news {
-    border: 5px solid #222222;
-    border-radius: 10px;
-    padding: 0;
-    height: 100%;
-}
-
-.news-title {
-    margin: 0;
-    padding: 5px;
-    font-size: 32px;
-}
-
-.news:nth-of-type(2n+1) .news-title {
-    background-color: #222222;
-    color: white;
-}
-
-.news-date {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    padding: 0px 5px 0px 5px;
-    font-size: 24px;
-    color: #444444;
-}
-
-.news-preview {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    font-size: 20px;
-    padding: 0px 5px 0px 5px;
-}
-
 footer {
     position: absolute;
-    height: 150px;
+    height: 170px;
     bottom: 0;
     left: 0;
     right: 0;
     padding: 10px;
     background-image: linear-gradient(black, #333333);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 1fr 1fr;
+    grid-template-areas: "contact links"
+                        "copyright copyright";
+    align-items:center;
+    justify-items:center;
+}
+
+.contact {
+    grid-area: contact;
+}
+
+.links {
+    grid-area: links;
 }
 
 .footer-links {
@@ -210,9 +175,19 @@ footer {
     color: grey;
 }
 
+.copyright {
+    grid-area: copyright;
+}
+
 footer a, footer p {
     font-family: 'Source Sans Pro', sans-serif;
     color: white;
     text-decoration: none;
     font-size: 20px;
+}
+
+@media screen and (max-width: 560px) {
+    footer {
+        height: 200px;
+    }
 }
