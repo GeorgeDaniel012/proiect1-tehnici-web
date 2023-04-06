@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;1,400&display=swap');
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -13,13 +19,18 @@ header {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    /*justify-content: center;*/
     flex-shrink: 0;
     flex-grow: 1;
     border-bottom: 5px solid black;
 }
 
-header img {
+.logo img {
+    margin: auto;
+    padding: 0;
+    max-width: 100%;
+}
+
+.logo {
     max-width: 30%;
 }
 
@@ -37,15 +48,20 @@ header img {
     font-size: 2vw;
     color: white;
     text-decoration: none;
-    transition: color 0.5s;
+    transition: color 0.5s, transform 1s;
 }
 
 .navbar a:hover {
     color: grey;
+    transform: scale(1.02);
 }
 
 .drop {
     display: inline-block;
+}
+
+.dropdown {
+    margin: auto;
 }
 
 .dropdown-content {
@@ -66,6 +82,7 @@ header img {
     header {
         flex-direction: column;
         position: relative;
+        row-gap: 10px;
     }
 
     header img {
@@ -75,13 +92,12 @@ header img {
     .navbar {
         flex-direction: column;
         width: 100%;
+        row-gap: 10px;
     }
 
     .navbar a {
         font-size: 5vw;
         border-top: 3px white solid;
-        padding-left: -50%;
-        padding-right: -50%;
     }
 }
 
@@ -93,7 +109,7 @@ header img {
 }
 
 main {
-    margin: 20px 16px 20px 16px;
+    margin: 20px 16px 180px 16px;
 }
 
 section {
@@ -148,7 +164,7 @@ section {
     font-size: 32px;
 }
 
-.news:nth-child(2n+1) .news-title {
+.news:nth-of-type(2n+1) .news-title {
     background-color: #222222;
     color: white;
 }
@@ -169,7 +185,11 @@ section {
 }
 
 footer {
-    font-size: 1.5vw;
+    position: absolute;
+    height: 150px;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding: 10px;
     background-image: linear-gradient(black, #333333);
     display: flex;
@@ -194,5 +214,5 @@ footer a, footer p {
     font-family: 'Source Sans Pro', sans-serif;
     color: white;
     text-decoration: none;
-    font-size: 1.5vw;
+    font-size: 20px;
 }
