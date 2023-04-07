@@ -27,16 +27,20 @@ header {
     flex-shrink: 0;
     flex-grow: 1;
     border-bottom: 5px solid black;
+    max-height: 50px;
+}
+
+.logo {
+    margin-left: 1vw;
+    max-width: 30%;
+    max-height: 100%;
 }
 
 .logo img {
     margin: auto;
-    padding: 0;
-    max-width: 100%;
-}
-
-.logo {
-    max-width: 30%;
+    padding: auto;
+    max-width: 80%;
+    max-height: 100%;
 }
 
 .navbar {
@@ -88,6 +92,7 @@ header {
         flex-direction: column;
         position: relative;
         row-gap: 10px;
+        max-height: none;
     }
 
     .logo img {
@@ -114,7 +119,7 @@ header {
 }
 
 main {
-    margin: 20px 16px 220px 16px;
+    margin: 20px 16px 250px 16px;
 }
 
 section {
@@ -135,6 +140,16 @@ section {
     padding-right: 8px;
     color:white;
     background-color: #222222;
+}
+
+@media screen and (min-width: 2000px) {
+    section {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 60px;
+    }
 }
 
 footer {
@@ -189,5 +204,19 @@ footer a, footer p {
 @media screen and (max-width: 560px) {
     footer {
         height: 200px;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    main {
+        margin-bottom: 300px;
+    }
+
+    footer {
+        height: 250px;
+    }
+
+    footer a, footer p {
+        font-size: 28px;
     }
 }
