@@ -53,14 +53,23 @@
     0% {
         border-color: red;
         background-color: red;
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.02);
     }
     50% {
         border-color: hotpink;
         background-color: hotpink;
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(0.98);
     }
     100% {
         border-color: red;
         background-color: red;
+        transform: scale(1);
     }
 }
 
