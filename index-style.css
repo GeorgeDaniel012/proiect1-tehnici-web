@@ -28,7 +28,6 @@
     border: 5px solid #222222;
     border-radius: 10px;
     padding: 0;
-    max-width: 100%;
     /*height: 100%;*/
 }
 
@@ -70,4 +69,9 @@
     .news-preview {
         font-size: 28px;
     }
+}
+
+#newsletter {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
 }

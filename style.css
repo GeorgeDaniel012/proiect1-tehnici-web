@@ -87,6 +87,16 @@ header {
     transition: opacity 0.5s;
 }
 
+.thememode {
+    flex-shrink: 1;
+    max-width: 5%;
+    max-height: 5%;
+}
+
+.thememode:hover {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 560px) {
     header {
         flex-direction: column;
@@ -108,6 +118,12 @@ header {
     .navbar a {
         font-size: 5vw;
         border-top: 3px white solid;
+    }
+
+    .thememode {
+        background-color: white;
+        max-width: 10%;
+        max-height: 10%;
     }
 }
 
@@ -167,6 +183,7 @@ footer {
                         "copyright copyright";
     align-items:center;
     justify-items:center;
+    color: white;
 }
 
 .contact {
